@@ -1,0 +1,147 @@
+body {
+    animation: backgroundAnimation 5s infinite;
+    /*实现了渐变效果*/
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #FFC0CB; /* 起始颜色为粉色 */
+    }
+    50% {
+        background-color: #87CEEB; /* 中间颜色为天蓝色 */
+    }
+    100% {
+        background-color: #FFC0CB; /* 结束颜色为粉色 */
+    }
+}
+
+.content-layout {
+    display: flex;
+    padding: 20px;
+}
+
+.left-content, .right-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.left-content {
+    flex: 1;
+    text-align: center;
+}
+
+.right-content {
+    flex: 2;
+}
+
+main {
+    padding: 20px;
+}
+
+.movie-details {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.movie-details img {
+    max-width: 100%;
+}
+
+.movie-summary {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+p{
+    font-size:16px;
+}
+.star-rating {
+    font-size: 32px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.star {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.star:hover,
+.star.active {
+    color: gold;
+}
+
+.user-reviews {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#selected-rating {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 10px;
+}
+/* css部分 */
+.btn {
+    /* 设置按钮的背景色为渐变色 */
+    background-color: #4CAF50; /* 绿色 */
+    background-image: linear-gradient(to right, #4CAF50 , #81C784); /* 渐变色 */
+    /* 设置按钮的边框为无 */
+    border: none;
+    /* 设置按钮的文字颜色为白色 */
+    color: white;
+    /* 设置按钮的文字大小为16px */
+    font-size: 16px;
+    /* 设置按钮的内边距为15px */
+    padding: 15px;
+    /* 设置按钮的外边距为4px */
+    /*margin: 4px;*/
+    /* 设置按钮的圆角为10px */
+    border-radius: 10px;
+    /* 设置按钮的阴影效果 */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    /* 设置按钮的过渡效果 */
+    transition-duration: 0.4s;
+    /* 设置按钮的光标为指针 */
+    cursor: pointer;
+    /* 设置按钮的文字为大写 */
+    text-transform: uppercase;
+    /*margin-right: 100px;*/
+}
+
+/* 设置按钮的悬停效果 */
+.btn:hover {
+    /* 设置按钮的背景色为渐变色 */
+    background-color: #81C784; /* 浅绿色 */
+    background-image: linear-gradient(to right, #81C784 , #4CAF50); /* 渐变色 */
+    /* 设置按钮的文字颜色为黑色 */
+    color: black;
+}

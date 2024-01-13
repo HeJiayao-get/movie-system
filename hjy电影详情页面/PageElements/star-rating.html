@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .star-rating {
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .star {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .star:hover,
+    .star.active {
+        color: gold;
+    }
+
+</style>
+<body>
+    <div class="star-rating" id="star-rating">
+        <span class="star" data-rating="1">&#9733;</span>
+        <span class="star" data-rating="2">&#9733;</span>
+        <span class="star" data-rating="3">&#9733;</span>
+        <span class="star" data-rating="4">&#9733;</span>
+        <span class="star" data-rating="5">&#9733;</span>
+    </div>
+    <div id="selected-rating">您的评分：0</div>
+
+</body>
+<script type="text/javascript">
+    const stars = document.querySelectorAll(".star");
+    const selectedRating = document.getElementById("selected-rating");
+
+    let rating = 0;
+
+    stars.forEach((star) => {
+        star.addEventListener("mouseover", () => {
+            resetStars();
+            const ratingValue = parseInt(star.getAttribute("data-rating"));
+            highlightStars(ratingValue);
+        });
+
+        star.addEventListener("mouseout", () => {
+            resetStars();
+            highlightStars(rating);
+        });
+
+        star.addEventListener("click", () => {
+            rating = parseInt(star.getAttribute("data-rating"));
+            selectedRating.innerHTML = `您的评分：${rating}`;
+        });
+    });
+
+    function resetStars() {
+        stars.forEach((star) => {
+            star.classList.remove("active");
+        });
+    }
+
+    function highlightStars(count) {
+        for (let i = 0; i < count; i++) {
+            stars[i].classList.add("active");
+        }
+    }
+
+</script>
+</html>

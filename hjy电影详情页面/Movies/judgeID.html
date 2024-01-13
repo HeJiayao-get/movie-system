@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户重定向</title>
+    <!-- 您可以取消注释并使用您自己的样式 -->
+     <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+<script>
+    // 一个函数来解析cookie并获取userName的值
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    // 读取cookie中的userName
+    let userName = getCookie("userName");
+
+    // 基于cookie值进行重定向
+    if (userName !== "") {
+        if (userName === 'admin') {
+            window.location.href = '/hjy管理界面（个人&管理员）/管理员/admin.html';
+        } else {
+            window.location.href = '/hjy管理界面（个人&管理员）/普通用户/Ordi_comments.php';
+        }
+    } else {
+        alert("用户名不存在。");
+        // 可以选择重定向到登录页面
+        // window.location.href = '/登录页面.html';
+    }
+</script>
+</body>
+</html>

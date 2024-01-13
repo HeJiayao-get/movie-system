@@ -1,0 +1,169 @@
+body {
+    animation: backgroundAnimation 5s infinite;
+    /*实现了渐变效果*/
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+ Reset some default browser styles
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    animation: backgroundAnimation 5s infinite;
+    /*    !*实现了渐变效果*!*/
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #FFC0CB; /* 起始颜色为粉色 */
+    }
+    50% {
+        background-color: #87CEEB; /* 中间颜色为天蓝色 */
+    }
+    100% {
+        background-color: #FFC0CB; /* 结束颜色为粉色 */
+    }
+}
+
+
+/* Set a background color for the body */
+body {
+    /*background-color: #f0f0f0;*/
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+.header {
+    background-color: #65debb;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.header a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.header .search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.search-button {
+    background-color: #137e5f;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Style the comments container */
+#comments-container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the pagination links */
+#pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination-link {
+    display: inline-block;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #137e5f;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pagination-link.active {
+    color: #fff;
+    background-color: #137e5f;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+/* Adjust alignment of delete button and adjacent text */
+.delete-button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+    margin-left: 10px; /* Add this line to create some space between the button and text */
+    margin-top: -40px;
+}
+
+/* Style for adjacent text */
+.comment-text {
+    display: inline-block; /* Add this line to make the text appear inline */
+    vertical-align: top; /* Add this line to vertically align the text with the button */
+    margin-top: 5px; /* Adjust as needed for vertical alignment */
+}
+
+
+.delete-button:hover {
+    background-color: #ff3b20;
+}
+
+/* Center-align the h1 element */
+h1 {
+    text-align: center;
+    color: lightyellow;
+    font-size: 60px;
+}
+.btn {
+    /* 设置按钮的背景色为渐变色 */
+    background-color: #4CAF50; /* 绿色 */
+    background-image: linear-gradient(to right, #4CAF50 , #81C784); /* 渐变色 */
+    /* 设置按钮的边框为无 */
+    border: none;
+    /* 设置按钮的文字颜色为白色 */
+    color: white;
+    /* 设置按钮的文字大小为16px */
+    font-size: 16px;
+    /* 设置按钮的内边距为15px */
+    padding: 15px;
+    /* 设置按钮的外边距为4px */
+    /*margin: 4px;*/
+    /* 设置按钮的圆角为10px */
+    border-radius: 10px;
+    /* 设置按钮的阴影效果 */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    /* 设置按钮的过渡效果 */
+    transition-duration: 0.4s;
+    /* 设置按钮的光标为指针 */
+    cursor: pointer;
+    /* 设置按钮的文字为大写 */
+    text-transform: uppercase;
+    /*margin-right: 100px;*/
+}
+
+/* 设置按钮的悬停效果 */
+.btn:hover {
+    /* 设置按钮的背景色为渐变色 */
+    background-color: #81C784; /* 浅绿色 */
+    background-image: linear-gradient(to right, #81C784 , #4CAF50); /* 渐变色 */
+    /* 设置按钮的文字颜色为黑色 */
+    color: black;
+}

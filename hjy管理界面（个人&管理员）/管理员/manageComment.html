@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Manager</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>Comments Manager</h1>
+<!-- header部分 -->
+<div class="header">
+    <span>
+<!--        <a href="registerAndLogin.html" style="color: rgb(19, 134, 95); " id="status">去登录/注册</a>-->
+    </span>
+    <span>
+<!--        <a href="" style="color: rgb(19, 134, 95); ">去个人中心</a>-->
+    </span>
+
+    <span>
+        <div class="search-form">
+            <form id="searchForm" action="#" method="get">
+                <input class="search-input" type="text" name="query" placeholder="搜索...">
+                <input class="search-button" type="submit" value="搜索">
+            </form>
+        </div>
+    </span>
+</div>
+<!-- header部分结束 -->
+
+<div id="comments-container"></div>
+<div id="pagination"></div>
+
+<script>
+    $(document).ready(function () {
+        // 初始化页面加载
+        loadComments(1);
+
+        // 翻页点击事件
+        $(document).on('click', '.pagination-link', function () {
+            let page = $(this).data('page');
+            loadComments(page);
+        });
+    });
+
+    function loadComments(page) {
+        // 使用AJAX调用getAllComments.php
+        $.ajax({
+            url: 'getAllComments.php',
+            method: 'GET',
+            data: { page: page },
+            success: function (response) {
+                let data = JSON.parse(response); // 修改这里，使用JSON.parse而不是eval
+                // 处理获取的评论数据
+                $('#comments-container').html(data.commentsHtml);
+                $('#pagination').html(data.paginationHtml);
+            },
+            error: function () {
+                console.error('Failed to get comments');
+            }
+        });
+    }
+
+// Function to handle the AJAX request to delete a comment
+function deleteComment(commentId) {
+    $.ajax({
+        url: 'delComments.php?comment_id=' + commentId, 
+        method: 'POST',
+        success: function (data) {
+            // Reload the comments after deletion
+            console.log("fuck");
+            loadComments(1);
+        },
+        error: function (error) {
+            console.error('Error:', error);
+        }
+    });
+}
+
+
+    // Function to add event listeners to delete buttons
+    function setupDeleteButtons() {
+        var deleteButtons = document.querySelectorAll('.delete-button');
+
+        deleteButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                // Get the comment ID from the data-comment-id attribute
+                var commentId = this.getAttribute('data-comment-id');
+
+                // Call the function to delete the comment
+                deleteComment(commentId);
+            });
+        });
+    }
+
+    $(document).ready(function () {
+    // 初始化页面加载
+    loadComments(1);
+
+    // 翻页点击事件
+    $(document).on('click', '.pagination-link', function () {
+        let page = $(this).data('page');
+        loadComments(page);
+    });
+});
+
+function loadComments(page) {
+    // 使用AJAX调用getAllComments.php
+    $.ajax({
+        url: 'getAllComments.php',
+        method: 'GET',
+        data: { page: page },
+        success: function (response) {
+            let data = JSON.parse(response); 
+            // 处理获取的评论数据
+            $('#comments-container').html(data.commentsHtml);
+            $('#pagination').html(data.paginationHtml);
+            // 设置删除按钮的监听事件
+            setupDeleteButtons();
+        },
+        error: function () {
+            console.error('Failed to get comments');
+        }
+    });
+}
+
+</script>
+
+</body>
+</html>

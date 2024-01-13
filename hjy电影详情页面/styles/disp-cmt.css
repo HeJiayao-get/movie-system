@@ -1,0 +1,31 @@
+@import url(style.css);
+
+.comments-display {
+    margin-top: 20px;
+    margin-bottom: 20px; /* 与页面其他元素保持一致的底部边距 */
+    background-color: #f8ebe8; /* Light grey background */
+    border: 1px solid #e1e1e1; /* Light grey border */
+    border-radius: 5px;
+    padding: 15px;
+    max-height: 400px; /* Or whatever maximum height you prefer */
+    overflow-y: auto; /* Allows scrolling if content is too long */
+    width: calc(100% - 40px); /* Width matching other content sections */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Consistent with other sections */
+}
+
+.comments-display p {
+    font-size: 14px;
+    line-height: 1.6; /* Makes text easier to read */
+    border-bottom: 1px solid #e1e1e1; /* Separates individual comments */
+    padding-bottom: 10px; /* Spacing between comment and border */
+    margin-bottom: 10px; /* Spacing between comments */
+    color: #333; /* Consistent text color */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .comments-display {
+        width: 100%; /* Full width on smaller screens */
+        margin: 10px 0; /* Smaller margin on smaller screens */
+    }
+}

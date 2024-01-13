@@ -1,0 +1,40 @@
+/*以下是页脚的布局*/
+.footer{
+    width: 100%;
+    height: 160px;
+    border: 1px solid orange;
+    position: relative;
+}
+.footer a:hover{
+    background-color: #37a;
+    color: white;
+}
+.footer_wrapper{
+    position: absolute;
+    left: 205px;
+    top: 20px;
+}
+.footer_left{
+    color: #999;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.footer_right{
+    position: absolute;
+    left: 540px;
+    top: 0;
+    width: 430px;
+    font-size: 12px;
+}
+.footer_right ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 20px;
+}
+.footer_right ul li{
+    display: inline-block;
+}
+.footer_right_pic a img{
+    position: relative;
+    top: 10px;
+}

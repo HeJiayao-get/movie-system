@@ -1,0 +1,97 @@
+body {
+    font-family: 'Arial', sans-serif;
+    /*background-color: #fda7d2;*/
+    margin: 0;
+    padding: 20px;
+    animation: backgroundAnimation 5s infinite;
+    /*    !*实现了渐变效果*!*/
+}
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #FFC0CB; /* 起始颜色为粉色 */
+    }
+    50% {
+        background-color: #87CEEB; /* 中间颜色为天蓝色 */
+    }
+    100% {
+        background-color: #FFC0CB; /* 结束颜色为粉色 */
+    }
+}
+
+h1 {
+    color: #f6e5b6;
+
+}
+
+.comment {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment p {
+    margin: 0;
+    color: #555;
+}
+
+.comment p:first-child {
+    font-weight: bold;
+}
+
+#pagination {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.pagination-link {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.pagination-link:hover {
+    background-color: #0056b3;
+}
+
+.search-form {
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* 响应式布局 */
+@media (max-width: 600px) {
+    .search-form form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-input {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
