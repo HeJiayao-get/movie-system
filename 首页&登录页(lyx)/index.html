@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>网站首页</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+
+<body>
+    <!-- header部分 -->
+    <div class="header">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <span style="margin-right: 10px;">
+                <div id="userNameContainer" style="display: none"></div>
+                <a href="registerAndLogin.html" style="color: rgb(19, 134, 95)" id="status">去登录/注册</a>
+            </span>
+            <span>
+                <a href="../hjy管理界面（个人&管理员）/管理员/admin.html" style="color: rgb(19, 134, 95)">去个人中心</a>
+            </span>
+        </div>
+        <div class="search-form">
+            <form id="searchForm" action="search.php" method="get">
+                <input class="search-input" type="text" name="query" placeholder="搜索..." />
+                <input class="search-button" type="submit" value="搜索" />
+            </form>
+        </div>
+        <div style="position: absolute; right: 0;">
+            <button id="logoutButton" style="outline: none;">退出</a>
+        </div>
+    </div>
+    <div class="header_down">
+        <div class="bg"></div>
+        <div class="register_app">
+            <p class="app_title">
+                影评平台
+                <span>5.0</span>
+            </p>
+            <p class="app_slogan">
+                <span>我们的精神角落</span>
+            </p>
+            <a href="#" class="link_app">下载App</a>
+            <div class="app_qr">
+                <a href="#" class="app_qr_a">
+                    <img src="img/icon_qrcode_green.png" alt="app_qr" />
+                </a>
+                <div class="app_qr_expand">
+                    <img src="./img/doubanapp_qrcode.png" alt="" class="app_qrExpand" />
+                    <p>iOS / Android 扫码直接下载</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header部分结束 -->
+    <!-- 横幅部分 -->
+    <div class="banner_ad"></div>
+    <!-- 横幅部分结束 -->
+    <!-- section部分 -->
+    <div id="section">
+        <div class="section_film">
+            <div class="wrapper_left">
+                <div class="film_left">
+                    <h2><a href="#">电影</a></h2>
+                    <ul>
+                        <li>
+                            <a href="#">选电影 </a><span><img src="./img/new_menu.gif" alt="new_menu" /></span>
+                        </li>
+                        <li><a href="#">分类</a></li>
+                        <li><a href="#">影评</a></li>
+                        <li><a href="#">预告片</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrapper_center">
+                <div class="center_header">
+                    <h2>
+                        正在热映&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+                        (&nbsp;
+                        <a href="#" class="time_a">更多</a>
+                        &nbsp;)
+                    </h2>
+                </div>
+
+                <div class="film_center">
+                    <ul>
+                        <li>
+                            <div class="pic">
+                                <a href="../hjy电影详情页面/Movies/movie_details.php?id=2"><img src="../imgMovie/三大队.png"
+                                        alt="film" /></a>
+                            </div>
+                            <div class="title">
+                                <a href="../hjy电影详情页面/Movies/movie_details.php?id=2">三大队</a>
+                            </div>
+                            <div class="rating" style="
+                    background: url('./img/ic_rating_s.png') no-repeat 0 -33px;
+                    height: 11px;
+                    margin-left: 20px;
+                  ">
+                                <span style="margin-left: 60px; color: orange">6.7</span>
+                            </div>
+                            <a href="#" class="purcharse">选座购票</a>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <a href="../hjy电影详情页面/Movies/movie_details.php?id=5"><img src="../imgMovie/海王2.png"
+                                        alt="film" /></a>
+                            </div>
+                            <div class="title">
+                                <a href="../hjy电影详情页面/Movies/movie_details.php?id=5">海王2</a>
+                            </div>
+                            <div class="rating" style="
+                    background: url('./img/ic_rating_s.png') no-repeat 0 -33px;
+                    height: 11px;
+                    margin-left: 20px;
+                  ">
+                                <span style="margin-left: 60px; color: orange">8.4</span>
+                            </div>
+                            <a href="#" class="purcharse">选座购票</a>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <a href="../hjy电影详情页面/Movies/movie_details.php?id=6"><img src="../imgMovie/花月杀手.png"
+                                        alt="film" /></a>
+                            </div>
+                            <div class="title">
+                                <a href="../hjy电影详情页面/Movies/movie_details.php?id=6">花月杀手</a>
+                            </div>
+                            <div class="rating">
+                                <span style="color: #333; margin-left: 40px">暂无评分</span>
+                            </div>
+                            <a href="#" class="purcharse">选座购票</a>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <a href="../hjy电影详情页面/Movies/movie_details.php?id=8"><img src="../imgMovie/闭上眼睛.png"
+                                        alt="film" /></a>
+                            </div>
+                            <div class="title">
+                                <a href="../hjy电影详情页面/Movies/movie_details.php?id=8">闭上眼睛</a>
+                            </div>
+                            <div class="rating">
+                                <span style="color: #333; margin-left: 40px">暂无评分</span>
+                            </div>
+                            <a href="#" class="purcharse">选座购票</a>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <a href="../hjy电影详情页面/Movies/movie_details.php?id=7"><img src="../imgMovie/金手指.png"
+                                        alt="film" /></a>
+                            </div>
+                            <div class="title">
+                                <a href="../hjy电影详情页面/Movies/movie_details.php?id=7">金手指</a>
+                            </div>
+                            <div class="rating" style="
+                    background: url('./img/ic_rating_s.png') no-repeat 0 -22px;
+                    height: 11px;
+                    margin-left: 20px;
+                  ">
+                                <span style="margin-left: 60px; color: orange">7.3</span>
+                            </div>
+                            <a href="#" class="purcharse">选座购票</a>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <a href="../hjy电影详情页面/Movies/movie_details.php?id=1"><img src="../imgMovie/一闪一闪亮星星.png"
+                                        alt="film" /></a>
+                            </div>
+                            <div class="title">
+                                <a href="../hjy电影详情页面/Movies/movie_details.php?id=1">一闪一闪亮星星</a>
+                            </div>
+                            <div class="rating" style="
+                    background: url('./img/ic_rating_s.png') no-repeat 0 -33px;
+                    height: 11px;
+                    margin-left: 20px;
+                  ">
+                                <span style="margin-left: 60px; color: orange">6.7</span>
+                            </div>
+                            <a href="#" class="purcharse">选座购票</a>
+                        </li>
+
+                        <li>
+                            <div class="pic">
+                                <a href="../hjy电影详情页面/Movies/movie_details.php?id=3"><img src="../imgMovie/名侦探柯南.png"
+                                        alt="film" /></a>
+                            </div>
+                            <div class="title">
+                                <a href="../hjy电影详情页面/Movies/movie_details.php?id=3">名侦探柯南</a>
+                            </div>
+                            <div class="rating" style="
+                    background: url('./img/ic_rating_s.png') no-repeat 0 -11px;
+                    height: 11px;
+                    margin-left: 20px;
+                  ">
+                                <span style="margin-left: 60px; color: orange">8.3</span>
+                            </div>
+                            <a href="#" class="purcharse">选座购票</a>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <a href="../hjy电影详情页面/Movies/movie_details.php?id=4"><img
+                                        src="../imgMovie/泰勒·斯威夫特：时代巡回演唱会.png" alt="film" /></a>
+                            </div>
+                            <div class="title">
+                                <a href="../hjy电影详情页面/Movies/movie_details.php?id=4">时代巡回演唱会</a>
+                            </div>
+                            <div class="rating" style="
+                    background: url('./img/ic_rating_s.png') no-repeat 0 -33px;
+                    height: 11px;
+                    margin-left: 20px;
+                  ">
+                                <span style="margin-left: 60px; color: orange">7.0</span>
+                            </div>
+                            <a href="#" class="purcharse">选座购票</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrapper_right">
+                <div class="movie_right">
+                    <div class="movie_item">
+                        <h2>
+                            影片分类&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+                            (&nbsp;
+                            <a href="#" class="time_a">更多</a>
+                            &nbsp;)
+                        </h2>
+                    </div>
+                    <div class="movies">
+                        <ul>
+                            <li><a href="#">爱情</a></li>
+                            <li><a href="#">喜剧</a></li>
+                            <li><a href="#">剧情</a></li>
+                            <li><a href="#">动画</a></li>
+                            <li><a href="#">科幻</a></li>
+                            <li><a href="#">动作</a></li>
+                            <li><a href="#">经典</a></li>
+                            <li><a href="#">悬疑</a></li>
+                            <li><a href="#">青春</a></li>
+                            <li><a href="#">犯罪</a></li>
+                            <li><a href="#">惊悚</a></li>
+                            <li><a href="#">文艺</a></li>
+                            <li><a href="#">纪录片</a></li>
+                            <li><a href="#">励志</a></li>
+                            <li><a href="#">剧情</a></li>
+                            <li><a href="#">战争</a></li>
+                            <li><a href="#">恐怖</a></li>
+                            <li><a href="#">幽默</a></li>
+                            <li><a href="#">美国</a></li>
+                            <li><a href="#">日本</a></li>
+                            <li><a href="#">香港</a></li>
+                            <li><a href="#">战争</a></li>
+                            <li><a href="#">英国</a></li>
+                            <li><a href="#">中国</a></li>
+                            <li><a href="#">韩国</a></li>
+                            <li><a href="#">剧情</a></li>
+                            <li><a href="#">法国</a></li>
+                            <li><a href="#">台湾</a></li>
+                            <li><a href="#">大陆</a></li>
+                            <li><a href="#">德国</a></li>
+                        </ul>
+                    </div>
+                    <div class="movie_hot">
+                        <h2>
+                            近期热门&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+                            (&nbsp;
+                            <a href="#" class="time_a">更多</a>
+                            &nbsp;)
+                        </h2>
+                    </div>
+                    <div class="hotMovie">
+                        <ol start="1">
+                            <li><a href="#">小戏骨：红楼梦之刘姥姥进大观园</a></li>
+                            <li><a href="#">极寒之城</a></li>
+                            <li><a href="#">猩球崛起3：终极之战</a></li>
+                            <li><a href="#">杀破狼·贪狼</a></li>
+                            <li><a href="#">大护法</a></li>
+                            <li><a href="#">小丑回魂</a></li>
+                            <li><a href="#">猎凶风河谷</a></li>
+                            <li><a href="#">双面情人</a></li>
+                            <li><a href="#">美国行动</a></li>
+                            <li><a href="#">辣手保姆</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- section部分结束 -->
+        <!-- footer begin -->
+        <div class="footer">
+            <div class="footer_wrapper">
+                <div class="footer_left">
+                    © 2005－2017 douban.com, all rights reserved 北京豆网科技有限公司
+                    <br />
+                    <a href="#">京ICP证090015号</a> 京ICP备11027288号 网络视听许可证<a href="#">0110418</a>号 <br />
+                    京网文[2015]2026-368号
+                    <img src="./img/biaoshi.gif" alt="" height="13" width="13" /><a href="#">京公网安备11010502000728</a>
+                    新出网证(京)字129号 <br />
+                    违法和不良信息举报电话：4008353331
+                    <img src="./img/file-1423193113.png" alt="" height="13" width="117" /><br />
+                    <img src="./img/jubao.png" alt="" height="12" width="12" /><a href="#">中国互联网举报中心</a>
+                    电话：12377
+                    <a href="#">《食品流通许可证》许可证：SP1101051510347287</a> <br />
+                    <a href="#">新出发京批字第直160029号</a>
+                </div>
+                <div class="footer_right">
+                    <div class="footer_right_item">
+                        <ul>
+                            <li><a href="#">关于</a></li>
+                            &middot;
+                            <li><a href="#">在这里工作</a></li>
+                            &middot;
+                            <li><a href="#">联系我们</a></li>
+                            &middot;
+                            <li><a href="#">免责声明</a></li>
+                            &middot;
+                            <li><a href="#">帮助中心</a></li>
+                            &middot;
+                            <li><a href="#">移动应用</a></li>
+                            &middot;
+                            <li><a href="#">广告</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_right_pic">
+                        <a href="#"><img src="./img/file-1489464722.jpg" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer ends -->
+    </div>
+    <script>
+        // 获取Cookie字符串
+        var cookieString = document.cookie;
+
+        // 将Cookie字符串拆分为Cookie数组
+        var cookies = cookieString.split(";");
+
+        // 遍历Cookie数组以查找特定的Cookie值
+        var userName = null;
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim(); // 去除空格
+            if (cookie.indexOf("userName=") === 0) {
+                // 找到了名为"userName"的Cookie
+                userName = cookie.substring("userName=".length);
+                break; // 可以提前退出循环，因为已经找到了所需的Cookie
+            }
+        }
+
+        // 现在，userName变量包含了Cookie中的用户名值
+
+        // 获取用于显示用户名的<div>元素
+        var userNameContainer = document.getElementById("userNameContainer");
+        let loginStatus = document.getElementById("status");
+        console.log(userNameContainer);
+        // 如果找到了用户名Cookie，则显示用户名
+        if (userName !== null) {
+            loginStatus.style.display = "none";
+            userNameContainer.innerText = "欢迎，" + userName;
+            userNameContainer.style.display = "block";
+        } else {
+            // 如果未找到用户名Cookie，则显示登录/注册链接
+            var statusLink = document.getElementById("status");
+            statusLink.style.display = "inline"; // 显示登录/注册链接
+        }
+
+
+        // 获取退出按钮的元素，假设其具有 id 为 "logoutButton"
+        const logoutButton = document.getElementById("logoutButton");
+        // 检查 cookie 中是否存在 userName
+        if (document.cookie.indexOf("userName=") !== -1) {
+            // 如果存在 userName，则显示退出按钮
+            logoutButton.style.display = "block";
+        } else {
+            // 如果不存在 userName，则隐藏退出按钮
+            logoutButton.style.display = "none";
+        }
+        // 添加点击事件监听器，当用户点击退出按钮时触发退出操作
+        logoutButton.addEventListener("click", () => {
+
+            // 向后端发送退出请求
+            fetch("logout.php", {
+                method: "GET", // 或者使用 "POST"，根据后端的实际配置
+            })
+                .then((response) => response.json()) // 解析 JSON 响应
+                .then((data) => {
+                    if (data.success) {
+                        // 成功退出，跳转到首页或其他操作
+                        alert("退出成功");
+                        window.location.href = "index.html"; // 跳转到首页
+                    } else {
+                        // 处理退出失败的情况，显示错误消息或其他操作
+                        alert("退出失败，请重试");
+                    }
+                })
+                .catch((error) => {
+                    console.error("退出请求错误:", error);
+                    // 处理请求错误，显示错误消息或其他操作
+                    alert("退出请求出错，请重试");
+                });
+        });
+
+    </script>
+</body>
+
+</html>
